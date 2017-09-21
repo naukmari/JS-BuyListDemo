@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+    padding-top: 20px;
+    background-color: #cdcbcb;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.left-column {
+    background-color: white;
+    width: 65%;
+    float: left;
+}
+
+.right-column {
+    background-color: white;
+    width: 30%;
+    float: right;
+}
+
+input[type=text] {
+    padding: 5px;
+    border: 1px solid gainsboro;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 75%;
+}
+
+.bl-add {
+    cursor: pointer;
+    background-color: #4b95d0;
+    color: white;
+    width: 20%;
+    float: right;
+    text-align: center;
+    font-size: 14px;
+    border: 0;
+    box-shadow: 0 1px #8a8589;
+    border-radius: 2px;
+    padding-top: 5px;
+    padding-bottom: 4px;
+}
+
+.bl-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.bl-product {
+    font-size: 14px;
+    width: 35%;
+    float: left;
+    line-height: 50px;
+}
+
+.bl-count {
+    font-size: 14px;
+    width: 30%;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+}
+
+.bl-buttons {
+    font-size: 14px;
+    line-height: 50px;
+    width: 35%;
+    float: right;
+    text-align: right;
+    /*padding-right: 5px;*/
+
+}
+
+.bl-row {
+    border-bottom: 1px solid grey;
+    padding: 5px;
+}
+
+.bl-background {
+    /* background: #fff00a;
+     padding: 20px; */
+}
+
+.bl-list {
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+}
+
+.title-remain {
+    margin: auto 0;
+}
+
+.title-bought {
+    margin-top: auto;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: auto;
+}
+
+.bl1-segment {
+    border-bottom: 1px solid grey;
+    padding: 5px;
+}
+
+.bl2-segment {
+    padding: 2px;
+    border-bottom: 1px solid grey;
+}
+
+.bl3-segment {
+    padding: 5px;
+    border-bottom: 1px solid grey;
+}
+
+.bl4-segment {
+    height: 40px;
+    border-bottom: 1px solid grey;
+}
+
+.bl2-list {
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+}
+
+.remaining-label {
+    border-radius: 7px;
+    margin: 3px;
+    background-color: #E8E8E8;
+    display: inline-block;
+    line-height: 25px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.title {
+}
+
+.number {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 35px;
+    width: 40px;
+    border: 0;
+    border-radius: 50%;
+    background-color: orangered;
+}
+
+/*Кнопки*/
+.bl-label {
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+    background: #E8E8E8;
+}
+
+.bl-plus {
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    border: 0;
+    border-radius: 50%;
+    background: #21BA45;
+    box-shadow: 0 1px #24663e;
+    outline: none;
+}
+
+.bl-plus:hover {
+    background-color: #3e8e41
+}
+
+.bl-plus:active {
+    transform: translateY(1px);
+}
+
+.bl-minus {
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    border: 0;
+    border-radius: 50%;
+    box-shadow: 0 1px #661114;
+    outline: none;
+    background: #DB2828;
+}
+
+.bl-minus:hover {
+    background-color: #a32629
+}
+
+.bl-minus:active {
+    transform: translateY(1px);
+}
+
+.bl-label2 {
+    font-size: 14px;
+    text-align: center;
+    height: 20px;
+    width: 65px;
+    border: 0;
+    outline: none;
+    background: #e7e7e7;
+    box-shadow: 0 1px #8a8589;
+    border-radius: 2px;
+}
+
+.bl-delete {
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    border: 0;
+    box-shadow: 0 1px #661114;
+    outline: none;
+    background: #DB2828;
+}
+
+.bl-delete:hover {
+    background-color: #a32629
+}
