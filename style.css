@@ -1,25 +1,38 @@
 body {
     margin: 0;
-    padding-top: 20px;
-    background-color: #cdcbcb;
+    background: #dad9d9;
+}
+
+.bl-background {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    background: #dad9d9;
 }
 
 .container {
-    width: 100%;
-    max-width: 800px;
+    max-width: 700px;
+    min-height: 360px;
+    padding: 45px;
     margin: auto;
+
 }
 
 .left-column {
+    box-sizing: border-box;
     background-color: white;
     width: 65%;
     float: left;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .right-column {
     background-color: white;
     width: 30%;
     float: right;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 input[type=text] {
@@ -30,29 +43,24 @@ input[type=text] {
     width: 75%;
 }
 
-.bl-add {
-    cursor: pointer;
-    background-color: #4b95d0;
-    color: white;
-    width: 20%;
-    float: right;
-    text-align: center;
-    font-size: 14px;
-    border: 0;
-    box-shadow: 0 1px #8a8589;
-    border-radius: 2px;
-    padding-top: 5px;
-    padding-bottom: 4px;
-}
-
 .bl-row {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
+    padding: 5px;
+    border-bottom: 0.4px solid grey;
 }
 
+.bl-last_row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 5px;
+}
 .bl-product {
+    font-family: Tahoma, serif;
     font-size: 14px;
     width: 35%;
     float: left;
@@ -73,61 +81,46 @@ input[type=text] {
     width: 35%;
     float: right;
     text-align: right;
-    /*padding-right: 5px;*/
-
 }
 
-.bl-row {
-    border-bottom: 1px solid grey;
-    padding: 5px;
+.title {
+    font-family: Tahoma, serif;
+    font-size: 14px;
 }
 
-.bl-background {
-    /* background: #fff00a;
-     padding: 20px; */
-}
-
-.bl-list {
-    border-top: 1px solid grey;
-    border-left: 1px solid grey;
-    border-right: 1px solid grey;
+.number {
+    font-family: Tahoma, serif;
+    font-size: 14px;
 }
 
 .title-remain {
     margin: auto 0;
+    font-family: Tahoma, serif;
 }
 
 .title-bought {
-    margin-top: auto;
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: auto;
+    margin: auto 0 auto 0;
+    font-family: Tahoma, serif;
 }
 
 .bl1-segment {
-    border-bottom: 1px solid grey;
+    border-bottom: 0.4px solid grey;
     padding: 5px;
 }
 
 .bl2-segment {
     padding: 2px;
-    border-bottom: 1px solid grey;
+    border-bottom: 0.4px solid grey;
 }
 
 .bl3-segment {
     padding: 5px;
-    border-bottom: 1px solid grey;
+    border-bottom: 0.4px solid grey;
 }
 
 .bl4-segment {
     height: 40px;
-    border-bottom: 1px solid grey;
-}
 
-.bl2-list {
-    border-top: 1px solid grey;
-    border-left: 1px solid grey;
-    border-right: 1px solid grey;
 }
 
 .remaining-label {
@@ -140,8 +133,6 @@ input[type=text] {
     padding-right: 3px;
 }
 
-.title {
-}
 
 .number {
     text-align: center;
@@ -151,11 +142,12 @@ input[type=text] {
     width: 40px;
     border: 0;
     border-radius: 50%;
-    background-color: orangered;
+    background-color: #ff6512;
 }
 
 /*Кнопки*/
 .bl-label {
+    font-family: Tahoma, serif;
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 4px;
@@ -195,7 +187,7 @@ input[type=text] {
     border-radius: 50%;
     box-shadow: 0 1px #661114;
     outline: none;
-    background: #DB2828;
+    background: #ff6259;
 }
 
 .bl-minus:hover {
@@ -207,6 +199,7 @@ input[type=text] {
 }
 
 .bl-label2 {
+    font-family: Tahoma, serif;
     font-size: 14px;
     text-align: center;
     height: 20px;
@@ -219,6 +212,7 @@ input[type=text] {
 }
 
 .bl-delete {
+    font-family: Tahoma, serif;
     color: white;
     border-radius: 2px;
     cursor: pointer;
@@ -233,4 +227,20 @@ input[type=text] {
 
 .bl-delete:hover {
     background-color: #a32629
+}
+
+.bl-add {
+    font-family: Tahoma, serif;
+    cursor: pointer;
+    background-color: #4b95d0;
+    color: white;
+    width: 20%;
+    float: right;
+    text-align: center;
+    font-size: 14px;
+    border: 0;
+    box-shadow: 0 1px #8a8589;
+    border-radius: 2px;
+    padding-top: 5px;
+    padding-bottom: 4px;
 }
