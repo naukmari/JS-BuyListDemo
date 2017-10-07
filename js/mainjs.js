@@ -1,10 +1,8 @@
 $(function() {
     var $list = $(".bl-list");
     var ONE_ROW_HTML = $(".one-row-template").html();
-// зробити var для рядку
-    var
 
-    function addItem(title) {
+    function addItem(title, needAnimation) {
         var $node = $(ONE_ROW_HTML);
 
         var quantity = 1;
@@ -18,6 +16,7 @@ $(function() {
         $node.find(".bl-plus").click(function(){
             quantity += 1;
             $quantity_label.text(quantity);
+            updateStaticstics();
         });
 
         $node.find(".bl-minus").click(function(){
@@ -28,20 +27,26 @@ $(function() {
                 quantity -= 1;
                 $quantity_label.text(quantity);
             }
+            updateStaticstics();
         });
 
-        $node.find(".bl-delete").click(function () {
-            $node.detach();
+
+         $node.find(".bl-delete").click(function () {
+
+            $node.fadeOut(500, function () { $node.remove(),  updateStaticstics()})
+
         });
 
         $node.find(".bl-buy").click(function () {
-           $node.bought = true;
+            $node.bought = true;
            $node.addClass("is-bought");
+            updateStaticstics();
         });
 
         $node.find(".bl-unbuy").click(function () {
             $node.removeClass("is-bought");
             $node.bought = false;
+            updateStaticstics();
         });
 
         $node.find(".bl-product").click(function () {
@@ -51,6 +56,8 @@ $(function() {
                 $node.find(".edit").val(title);
                 $node.find(".edit").focus();
             }
+            updateStaticstics();
+
 
         });
 
@@ -61,25 +68,39 @@ $(function() {
                 title = $node.find(".edit").val();
                 $node.find(".bl-product").text(title);
             }
+            updateStaticstics();
         });
 
+
         $list.append($node);
+        if (needAnimation) {
+            $node.hide();
+            $node.fadeIn(900)
+        }
 
     }
 
-    addItem("Помідори");
-    addItem("Огірки");
-    addItem("Капуста");
+    function createRmainItem(name, count) {
+        return $('<div/>').addClass('remaining-label')
+            .append( $('<span/>').html(name).addClass('title'))
+            .append( $('<span/>').html(count).addClass('number'));
+    }
+
+    addItem("Помідори", false);
+    addItem("Огірки", false);
+    addItem("Капуста", false);
 
     var $new_input = $(".bl-new_item");
 
     $(".bl-add").click(function () {
-        var new_name = $new_input.val();
-        if(new_name.trim()){
-            addItem(new_name);
-            $new_input.val("");
-            $new_input.focus();
-        }
+
+            var new_name = $new_input.val();
+            if (new_name.trim()) {
+                addItem(new_name, true);
+                $new_input.val("");
+                $new_input.focus();
+            }
+        updateStaticstics();
      });
 
     $(".bl-new_item").keypress(function (event) {
@@ -87,26 +108,29 @@ $(function() {
         if(keycode == '13'){
             var new_name = $new_input.val();
             if(new_name.trim()){
-                addItem(new_name);
+                addItem(new_name, true);
                 $new_input.val("");
                 $new_input.focus();
             }
         }
+        updateStaticstics();
     });
 
     function updateStaticstics() {
-        $(".ffdfd").html("");
-
-        $(".bl-row").each(function(i, elem){
-            var $node = $(elem);
-
-            if($node.hasClass("is-bought")) {
-                $node.find("title")
-
-
-            } else {
-
-            }
-        })
+        $('.bl2-products').empty();
+        $('.bl4-bought_products').empty();
+        $('.bl-row').each(function(ind, elem) {
+           var name = $(elem).find('.bl-product').html();
+           var count = $(elem).find('.bl-label').html();
+           var classesList = $(elem).attr('class')
+           var elem = createRmainItem(name, count);
+           if (classesList.indexOf('is-bought') > -1) {
+               $('.bl4-bought_products').append(elem);
+           } else {
+            $('.bl2-products').append(elem);
+           }
+        });
     }
+
+    updateStaticstics();
 });

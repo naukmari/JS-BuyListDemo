@@ -38,7 +38,7 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-@media (max-width: 720px) {
+@media (max-width: 500px) {
     .left-column {
         width: 100%;
         margin-bottom: 20px;
@@ -132,6 +132,8 @@ input[type=text] {
 }
 
 .bl2-products {
+    min-height: 40px;
+    height: 100%;
     padding: 2px;
     border-bottom: 0.4px solid grey;
 }
@@ -142,8 +144,9 @@ input[type=text] {
 }
 
 .bl4-bought_products {
-    height: 40px;
-
+    min-height: 40px;
+    height: 100%;
+    padding: 2px;
 }
 
 .remaining-label {
@@ -156,13 +159,17 @@ input[type=text] {
     padding-right: 3px;
 }
 
+.remaining-label:last-child {
+    display: none;
+}
+
 
 .number {
     text-align: center;
     padding-left: 5px;
     padding-right: 5px;
-    height: 35px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     border: 0;
     border-radius: 50%;
     background-color: #ff6512;
@@ -319,7 +326,7 @@ input[type=text] {
     }
     .badge {
         color: black;
-        border: 3px solid deeppink;
+        border: 3px solid #ab22a4;
     }
 }
 
@@ -361,6 +368,11 @@ button:hover::after{
     display: inline;
 }
 
-.bl-row.is-bought .bl-product {
+.bl-row.is-bought .bl-product, .bl4-bought_products .remaining-label {
     text-decoration: line-through;
+}
+
+.number {
+    margin-left: 4px;
+
 }
