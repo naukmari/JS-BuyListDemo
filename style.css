@@ -26,6 +26,7 @@ body {
     float: left;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-bottom: 45px;
 }
 
 .right-column {
@@ -64,14 +65,22 @@ input[type=text] {
     padding: 5px;
     border-bottom: 0.4px solid grey;
 }
+.bl-row:last-child {
+    border: 0;
+}
+.bl-row:first-child {
+    border-top: 0.4px solid grey;
+}
 
-.bl-last_row {
+.bl-new {
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
     padding: 5px;
 }
+
 .bl-product {
     font-family: Tahoma, serif;
     font-size: 14px;
@@ -122,7 +131,7 @@ input[type=text] {
     padding: 5px;
 }
 
-.bl2-segment {
+.bl2-products {
     padding: 2px;
     border-bottom: 0.4px solid grey;
 }
@@ -132,7 +141,7 @@ input[type=text] {
     border-bottom: 0.4px solid grey;
 }
 
-.bl4-segment {
+.bl4-bought_products {
     height: 40px;
 
 }
@@ -212,12 +221,25 @@ input[type=text] {
     transform: translateY(1px);
 }
 
-.bl-label2 {
+.bl-buy {
     font-family: Tahoma, serif;
     font-size: 14px;
     text-align: center;
     height: 20px;
-    width: 65px;
+    width: 79px;
+    border: 0;
+    outline: none;
+    background: #e7e7e7;
+    box-shadow: 0 1px #8a8589;
+    border-radius: 2px;
+}
+
+.bl-unbuy {
+    font-family: Tahoma, serif;
+    font-size: 14px;
+    text-align: center;
+    height: 20px;
+    width: 100px;
     border: 0;
     outline: none;
     background: #e7e7e7;
@@ -325,4 +347,20 @@ button:hover::after{
     opacity: 1;
     visibility: visible;
     transform: translateY(-25px) translateX(-50%) scale(1);
+}
+
+.bl-row .bl-unbuy {
+    display: none;
+}
+
+.bl-row.is-bought button {
+    display: none;
+}
+
+.bl-row.is-bought .bl-unbuy {
+    display: inline;
+}
+
+.bl-row.is-bought .bl-product {
+    text-decoration: line-through;
 }
