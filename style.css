@@ -25,7 +25,7 @@ body {
     width: 65%;
     float: left;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 45px;
 }
 
@@ -35,14 +35,14 @@ body {
     width: 30%;
     float: right;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 500px) {
     .left-column {
         width: 100%;
         margin-bottom: 20px;
-     }
+    }
 
     .right-column {
         width: 100%;
@@ -65,9 +65,11 @@ input[type=text] {
     padding: 5px;
     border-bottom: 0.4px solid grey;
 }
+
 .bl-row:last-child {
     border: 0;
 }
+
 .bl-row:first-child {
     border-top: 0.4px solid grey;
 }
@@ -90,7 +92,6 @@ input[type=text] {
 }
 
 .bl-count {
-
     font-size: 14px;
     width: 30%;
     float: left;
@@ -159,19 +160,15 @@ input[type=text] {
     padding-right: 3px;
 }
 
-.remaining-label:last-child {
-    display: none;
-}
-
 
 .number {
     text-align: center;
     padding-left: 5px;
     padding-right: 5px;
-    height: 50px;
-    width: 50px;
+    height: 20px;
+    width: 20px;
     border: 0;
-    border-radius: 50%;
+    border-radius: 500rem;
     background-color: #ff6512;
 }
 
@@ -292,7 +289,7 @@ input[type=text] {
     position: fixed;
     bottom: -130px;
     left: 20px;
-    width:100px;
+    width: 100px;
     height: 180px;
     color: white;
     background: #ab22a4;
@@ -304,7 +301,6 @@ input[type=text] {
     border-top-right-radius: 20px;
     transition: all 1s ease;
 }
-
 
 .badge .created {
     font-size: 15px;
@@ -324,6 +320,7 @@ input[type=text] {
     .badge .created {
         margin-top: 0px;
     }
+
     .badge {
         color: black;
         border: 3px solid #ab22a4;
@@ -331,11 +328,10 @@ input[type=text] {
 }
 
 button {
-
     position: relative;
 }
 
-button::after{
+button::after {
     position: absolute;
     bottom: 5px;
     left: 50%;
@@ -348,9 +344,10 @@ button::after{
     color: white;
     visibility: hidden;
     transition: all 1s ease;
-    transform: translateY(0px) translateX(-50%) scale(0) ;
+    transform: translateY(0px) translateX(-50%) scale(0);
 }
-button:hover::after{
+
+button:hover::after {
     opacity: 1;
     visibility: visible;
     transform: translateY(-25px) translateX(-50%) scale(1);
@@ -374,5 +371,4 @@ button:hover::after{
 
 .number {
     margin-left: 4px;
-
 }
